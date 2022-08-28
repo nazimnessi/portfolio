@@ -25,7 +25,7 @@ SECRET_KEY = 'czrzarna==v46nj1yuy1q3y8fuy4ptlkvcc5uv%fw1jy(%-mf5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'portfolio-nazimvk.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
