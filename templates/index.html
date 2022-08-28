@@ -1,0 +1,509 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Nazim VK resume</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{% static 'css/default.css' %}">
+	<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+   <link rel="stylesheet" href="{% static 'css/media-queries.css' %}">
+   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+   <!-- Script
+   ================================================== -->
+	<script src="{% static 'js/modernizr.js' %}"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Nazim VK.</h1>
+            <h3>I'm a <span>Python developer</span>, <span>Front-end Developer</span> and <span>webdesigner</span> creating awesome and
+            effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
+            and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr />
+            <ul class="social">
+               <li><a href="https://www.linkedin.com/in/nazim-vk"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://www.instagram.com/nazimnessi"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="{% static 'images/profilepic.jpg' %}" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness. In my previous role, I was promoted with in 3 months of joining.
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Nazim VK</span><br>
+						   <span>Aminas P.O Chalad, Manal, Kisan Road
+                      Kannur, Kerala, India
+                     </span><br>
+						   <span>(+91)8921-657-757</span><br>
+                     <span>nazimvk@gmail.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="Nazim_Resume.pdf" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Bachelor of Computer Science and Technology</h3>
+                  <p class="info">Collage of Engineering Thalassery <span>&bull;</span> <em class="date">2016 - 2020</em></p>
+
+                  <p>
+                  <b>“A program is never less than 90% complete, and never more than 95% complete.”</b>
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Higher Secondary</h3>
+                  <p class="info">S.N.Trust Higher Secondary School <span>&bull;</span> <em class="date">2014 - 2016</em></p>
+
+                  <p>
+                  <b>“The roots of education are bitter, but the fruit is sweet.”</b>
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            {% for i in exps %}
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>{{i.position}}</h3>
+                  <p class="info">{{i.company_name}} <span>&bull;</span> <em class="date">{{i.joining_date}} - {{i.leaving_date}}</em></p>
+
+                  <div>{{i.desc}}
+                     <div><b>What ive done in company:</b></div>
+                     <ul>
+                        {% for j in i.work %}
+                        <li>{{j}}</li>
+                        {% endfor %}
+                     </ul>
+                   </div>
+
+               </div>
+
+            </div> <!-- item end -->
+            {% endfor %}
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>I'm really skilled at many factors, here is a list of few which im proud of.</p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand python"></span><em>Python</em></li>
+                  <li><span class="bar-expand javascript"></span><em>JavaScript</em></li>
+						<li><span class="bar-expand c-plus"></span><em>C++</em></li>
+						<li><span class="bar-expand css"></span><em>CSS</em></li>
+						<li><span class="bar-expand html5"></span><em>HTML5</em></li>
+                  <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Works.</h1>
+            <div class="twelve columns">
+
+                  <div class="work-experience-section px-3 px-lg-4">
+                      <div class="timeline">
+                        <div class="timeline-card timeline-card-primary-blue card shadow-sm">
+                          <div class="card-body">
+                              {% for project in pros %}
+                            <h3 class="h3 mb-4">{{project.title}}</h3>
+                            <div class="text-muted text-small mb-2">{{project.date}}</div>
+                            <div>{{project.desc}}
+                                <ul>
+                                  <li>{{project.status}}
+                                  </li>
+                                </ul>
+
+                            </div>
+                              {% if project.upload != "None" %}
+                              <p>
+                                 <a href='{{project.upload.url}}' class="button"><i class="fa fa-download"></i>Download</a>
+                              </p>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+
+            </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Call-To-Action Section
+   ================================================== -->
+   <section id="call-to-action">
+
+      <div class="row">
+
+         <div class="two columns header-col">
+
+            <h1><span>Get Hosting.</span></h1>
+
+         </div>
+
+         <div class="seven columns">
+
+            <h2><span class="lead">Internship</span></h2>
+            
+            <div class="card-body">
+               {% for intern in intr %}
+               <div class="h5 mb-1"><b style="color: white">{{intern.title}}</b> <span class="text-muted h6">from <b style="color: white"> {{intern.comny}}</b></span></div>
+               <div class="text-muted text-small mb-2">{{intern.date}}</div>
+               <div><b>{{intern.desc}}</b></div>
+               {% endfor %}
+            </div>
+
+         </div>
+
+         <div class="three columns action">
+
+
+
+         </div>
+
+      </div>
+
+   </section> <!-- Call-To-Action Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Client Testimonials</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                           to do what you believe is great work. And the only way to do great work is to love what you do.
+                           If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+                           </p>
+                           <cite>Steve Jobs</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+                           </p>
+                           <cite>Mr. Martin Fowler</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead"> It would be my honor to know you, Lets have a Talk
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+               <!-- form -->
+               <form method="post" action="{% url 'index' %}" id="contactForm" name="contactForm" role='form'>
+                  {% csrf_token %}
+                  
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="ContactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                     <button class="submit">Submit</button>
+                     
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+               <!-- contact-warning -->
+               <div id="message-warning"> Error boy</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Phone</h4>
+					   <p class="address">
+						   Nazim VK<br>
+						   Aminas P.O Chalad, Manal, Kisan Road
+                      Kannur, Kerala, India<br>
+						   <span>(+91)8921-657-757</span>
+					   </p>
+
+				   </div>
+
+            </aside>
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2021 Nazim VK</li>
+               <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Nazim VK</a></li>   
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+
+   <script src="{% static 'js/jquery.flexslider.js' %}"></script>
+   <script src="{% static 'js/waypoints.js' %}"></script>
+   <script src="{% static 'js/jquery.fittext.js' %}"></script>
+   <script src="{% static 'js/magnific-popup.js' %}"></script>
+   <script src="{% static 'js/init.js' %}"></script>
+
+</body>
+
+</html>
